@@ -1,0 +1,75 @@
+{
+  "app": {
+    "nombre": "Turno Ágil",
+    "lema": "Tu turno, sin tanta espera",
+    "descripcion": "Aplicación web que permite a los pacientes registrarse, conocer su turno y ver en tiempo real cuánto falta para ser atendidos.",
+    "version": "Boceto · Primera versión (prototipo)"
+  },
+  "pasos": [
+    { "n": 1, "titulo": "Pantalla de inicio", "texto": "Muestra el logo de la app y un botón para comenzar el registro o iniciar sesión." },
+    { "n": 2, "titulo": "Registro / Inicio de sesión", "texto": "El usuario ingresa sus datos para crear una cuenta o iniciar sesión si ya la tiene." },
+    { "n": 3, "titulo": "Menú principal", "texto": "Desde aquí el usuario puede solicitar un turno, ver sus turnos activos, buscar centros de salud y gestionar su perfil." },
+    { "n": 4, "titulo": "Solicitud de turno", "texto": "El usuario elige el servicio y el centro de salud. Luego puede ver la disponibilidad de horarios." },
+    { "n": 5, "titulo": "Turno en tiempo real", "texto": "El paciente puede ver su número de turno, la posición en la cola y el tiempo estimado de espera." }
+  ],
+  "menu": [
+    { "id": "solicitar", "titulo": "Solicitar turno", "icono": "i-calendar", "destino": "solicitar" },
+    { "id": "turnos", "titulo": "Mis turnos", "icono": "i-clock", "destino": "turno" },
+    { "id": "centros", "titulo": "Centros de salud", "icono": "i-building", "destino": "centros" },
+    { "id": "perfil", "titulo": "Mi perfil", "icono": "i-user", "destino": "perfil" }
+  ],
+  "servicios": [
+    { "id": "medicina-general", "nombre": "Medicina General", "prefijo": "A", "minutosPorPaciente": 3 },
+    { "id": "pediatria", "nombre": "Pediatría", "prefijo": "B", "minutosPorPaciente": 4 },
+    { "id": "ginecologia", "nombre": "Ginecología y Obstetricia", "prefijo": "C", "minutosPorPaciente": 5 },
+    { "id": "odontologia", "nombre": "Odontología", "prefijo": "D", "minutosPorPaciente": 6 },
+    { "id": "laboratorio", "nombre": "Laboratorio", "prefijo": "E", "minutosPorPaciente": 2 }
+  ],
+  "centros": [
+    {
+      "id": "algarrobos",
+      "nombre": "Hospital Los Algarrobos",
+      "direccion": "Av. Principal 123 (dirección de ejemplo)",
+      "telefono": "(01) 555-0101",
+      "horario": "Lun a Sáb · 7:00 a 19:00",
+      "servicios": ["medicina-general", "pediatria", "ginecologia", "odontologia", "laboratorio"]
+    },
+    {
+      "id": "san-martin",
+      "nombre": "Centro de Salud San Martín",
+      "direccion": "Jr. Los Olivos 456 (dirección de ejemplo)",
+      "telefono": "(01) 555-0102",
+      "horario": "Lun a Vie · 8:00 a 17:00",
+      "servicios": ["medicina-general", "pediatria", "odontologia"]
+    },
+    {
+      "id": "villa-norte",
+      "nombre": "Policlínico Villa Norte",
+      "direccion": "Calle Las Flores 789 (dirección de ejemplo)",
+      "telefono": "(01) 555-0103",
+      "horario": "Lun a Sáb · 8:00 a 18:00",
+      "servicios": ["medicina-general", "ginecologia", "laboratorio"]
+    },
+    {
+      "id": "santa-rosa",
+      "nombre": "Centro Materno Infantil Santa Rosa",
+      "direccion": "Av. Los Jardines 321 (dirección de ejemplo)",
+      "telefono": "(01) 555-0104",
+      "horario": "Lun a Dom · 7:00 a 20:00",
+      "servicios": ["pediatria", "ginecologia", "laboratorio"]
+    }
+  ],
+  "franjas": [
+    "08:00", "08:30", "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
+    "14:00", "14:30", "15:00", "15:30", "16:00", "16:30"
+  ],
+  "turnoDemo": {
+    "codigo": "A-023",
+    "servicio": "Medicina General",
+    "centro": "Hospital Los Algarrobos",
+    "hora": "09:30",
+    "posicion": 5,
+    "total": 12,
+    "minutosPorPaciente": 3
+  }
+}
